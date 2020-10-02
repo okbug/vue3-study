@@ -1,27 +1,27 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+  <h1>{{msg}}</h1>
+  <TestMouse></TestMouse>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import HelloWorld from './components/HelloWorld.vue';
+import TestMouse from "@/components/TestMouse.vue";
 
 export default defineComponent({
   name: 'App',
+  data() {
+    return {
+      msg:'我可以不是一个根节点'
+    }
+  },
   components: {
-    HelloWorld
+    TestMouse
   }
-});
+})
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style scope>
+h1 {
+  justify-content: center;
 }
 </style>
